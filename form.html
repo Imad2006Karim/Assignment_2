@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          placeholder="Enter your full name"
+          required
+          minlength="3"
+          autofocus
+        />
+
+        <br />
+
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          pattern="[A-Za-z0-9_]"
+          minlength="4"
+          placeholder="Letters,numbers,underscore"
+          title="Only use letters,numbers,underscore"
+        />
+
+        <br />
+
+        <label for="dob">Date Of Birth</label>
+        <input
+          type="date"
+          id="dob"
+          name="dob"
+          required
+          min="1950-01-01"
+          max="2010-12-31"
+        />
+
+        <br />
+
+        <label>Gender :</label>
+        <input type="radio" id="male" name="gender" value="male" required />
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Information</legend>
+
+        <label for="mail">Email</label>
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          required
+          placeholder="example@mail.com"
+        />
+
+        <br />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{10}"
+          placeholder="0599123456"
+          title="Enter a 10-digit phone number"
+          required
+        />
+
+        <br />
+
+        <label for="country">Country</label>
+        <select name="country" id="country" required>
+          <option value="">--Select your country--</option>
+          <option value="palestine">Palestine</option>
+          <option value="jordan">Jordan</option>
+          <option value="egypt">Egypt</option>
+          <option value="saudi">Saudi Arabia</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Security</legend>
+
+        <label for="pass">Password</label>
+        <input
+          type="password"
+          name="pass"
+          id="pass"
+          minlength="8"
+          placeholder="At least 8 characters"
+          required
+        />
+
+        <br />
+
+        <label for="confirm">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm"
+          name="confirm"
+          required
+          minlength="8"
+          placeholder="Re-enter your password"
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Academic & Preferences</legend>
+
+        <label for="major">Major / Field Of Study</label>
+        <select name="major" id="major" required>
+          <option value="">--Select your major--</option>
+          <option value="cs">Computer Science</option>
+          <option value="engineering">Engineering</option>
+          <option value="medicine">Medicine</option>
+          <option value="business">Business</option>
+          <option value="other">Other</option>
+        </select>
+
+        <br />
+
+        <label>Interests :</label>
+        <input
+          type="checkbox"
+          name="interests"
+          id="programming"
+          value="programming"
+        />
+        <label for="programming">Programming</label>
+
+        <input type="checkbox" name="interests" id="design" value="design" />
+        <label for="design">Design</label>
+
+        <input type="checkbox" name="interests" id="sports" value="sports" />
+        <label for="sports">Sports</label>
+
+        <input type="checkbox" name="interests" id="reading" value="reading" />
+        <label for="reading">Reading</label>
+
+        <br />
+
+        <label for="skill">Skill Level :</label>
+        <input
+          type="range"
+          id="skill"
+          name="skill"
+          min="0"
+          max="10"
+          value="5"
+        />
+
+        <br />
+
+        <label>Account Type :</label>
+        <input
+          type="radio"
+          name="accountType"
+          id="student"
+          value="student"
+          required
+        />
+        <label for="student">Student</label>
+
+        <input type="radio" name="accountType" id="teacher" value="teacher" />
+        <label for="teacher">Teacher</label>
+
+        <input type="radio" name="accountType" id="other" value="other" />
+        <label for="other">Other</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="photo">Profile Picture</label>
+        <input type="file" id="photo" name="photo" />
+
+        <br />
+
+        <label for="bio">Bio / About me</label>
+        <textarea
+          name="bio"
+          id="bio"
+          rows="5"
+          maxlength="300"
+          placeholder="Tell us about yourself (max 300 characters)"
+        ></textarea>
+
+        <br />
+
+        <input type="checkbox" name="terms" id="terms" />
+        <label for="terms">I agree to the Terms and Conditions</label>
+      </fieldset>
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
